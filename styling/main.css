@@ -1,0 +1,71 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: black;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.content {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.padding-64 {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.wide {
+    letter-spacing: 4px;
+}
+
+.black,
+.hover-black:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.button:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.container:after,
+.container:before,
+.panel:after,
+.panel:before,
+.row:after,
+.row:before,
+.row-padding:after,
+.row-padding:before,
+.cell-row:before,
+.cell-row:after,
+.clear:after,
+.clear:before,
+.bar:before,
+.bar:after {
+    content: "";
+    display: table;
+    clear: both
+}

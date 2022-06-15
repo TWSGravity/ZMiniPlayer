@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ZMini Player</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styling/main.css">
+    <link rel="stylesheet" href="./styling/dropdown.css">
+</head>
+
+<body>
+    <div class="content" style="max-width:2000px;">
+        <div class="black" id="tour">
+            <div class="container content padding-64" style="max-width:800px">
+                <h2 class="wide center">Player</h2>
+
+                <div class="center">
+                    <input id="repeatButton" type="button" class="button black" value="Repeat">
+                    <input id="stopButton" type="button" class="button black" value="Stop" style="display:none;">
+                    <input id="startButton" type="button" class="button black" value="Start">
+                    <input id="shuffleButton" type="button" class="button black" value="Shuffle">
+                </div>
+
+                <div class="center">
+                    <input id="addQueueButton" type="button" class="button black" value="Add to Queue">
+                </div>
+
+                <div style="display: none;" id="clear-queue-button" class="center">
+                    <input id="addQueueButton" type="button" class="button black" value="Clear queue">
+                </div>
+
+                <div id="addQueueDropdown" class="dropdown-content">
+                    <a style="cursor:pointer;" onclick="document.getElementById('queue-file').click();">File</a>
+                    <a style="cursor:pointer;" onclick="document.getElementById('queue-folder').click();">Folder</a>
+                    <input id="queue-file" type="file" style="display: none;">
+                    <input id="queue-folder" type="file" style="display: none;" webkitdirectory multiple />
+                </div>
+
+                <div style="display: none;" id="queueList" class="center">
+                    <h2>Queue</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio and variables -->
+    <script src="./js/howler/howler.js"></script>
+    <script src="./js/vars.js"></script>
+
+    <!-- Button events -->
+    <script src="./js/events/buttons.js"></script>
+    <script src="./js/events/addQueue.js"></script>
+
+    <!-- Song events -->
+    <script src="./js/play.js"></script>
+</body>
+
+</html>
