@@ -55,13 +55,7 @@ function addToQueue(data) {
                         src: [event.target.result]
                     });
 
-                    song.loop(repeat);
-                    song.name = songName;
-                    const id = songQueue.length;
-
-                    queueList.innerHTML +=
-                        `<h4 title="Play ${songName}" id="${id}" style="cursor:pointer;" onclick="play(${id})">${songName}</h4>`;
-                    songQueue.push(song);
+                    process(song, songName);
                 }
             }
         }

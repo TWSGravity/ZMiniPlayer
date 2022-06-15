@@ -4,12 +4,12 @@ document.getElementById('repeatButton').addEventListener('click', () => {
     switch (button.value) {
         case 'Repeat':
             button.value = 'Repeat[]';
-            repeat = 'song'
+            repeat = 'queue'
             window.localStorage.setItem('repeat', repeat);
             break;
         case 'Repeat[]':
             button.value = 'Repeat[1]';
-            repeat = 'queue'
+            repeat = 'song'
             window.localStorage.setItem('repeat', repeat);
             break;
         case 'Repeat[1]':
@@ -26,6 +26,7 @@ document.getElementById('stopButton').addEventListener('click', () => {
     document.getElementById('stopButton').style.display = 'none';
     document.getElementById('startButton').style.display = '';
     document.title = title;
+    playing.state = false;
     playing.song.stop();
 });
 
