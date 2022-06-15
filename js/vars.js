@@ -11,10 +11,10 @@ let repeat = window.localStorage.getItem('repeat');
 let shuffle = window.localStorage.getItem('shuffle') === 'true';
 
 switch (repeat) {
-    case 'song':
+    case 'queue':
         document.getElementById('repeatButton').value = 'Repeat[]';
         break;
-    case 'queue':
+    case 'song':
         document.getElementById('repeatButton').value = 'Repeat[1]';
         break;
 }
